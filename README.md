@@ -12,6 +12,7 @@ Uala-Tweet es una plataforma de microblogging similar a Twitter, construida con 
 - [Datos Pre-cargados](#datos-pre-cargados)
 - [Uso de la API](#uso-de-la-api)
 - [Ejemplos de cURL](#ejemplos-de-curl)
+- [API Desplegada en Render](#api-desplegada-en-render)
 - [Contribución](#contribución)
 - [Licencia](#licencia)
 
@@ -142,6 +143,33 @@ curl --location 'http://localhost:8080/timeline' \
 - **Headers**:
   - `User-ID: user1`: Indica qué usuario solicita su línea de tiempo.
 - **Descripción**: Este comando recupera la línea de tiempo (tweets) del usuario "user1" y de las personas a las que sigue.
+
+## API Desplegada en Render
+
+La API también está disponible públicamente a través de Render. Aquí están los ejemplos de `cURL` apuntando a la API desplegada:
+
+### 1. Obtener la Línea de Tiempo
+
+```bash
+curl --location 'https://uala-tweet-2.onrender.com/timeline' \
+--header 'User-ID: user1'
+```
+
+### 2. Publicar un Tweet
+
+```bash
+curl --location 'https://uala-tweet-2.onrender.com/tweets' \
+--header 'Content-Type: application/json' \
+--header 'User-ID: user2' \
+--data '{"content": "Otro Tweet de prueba para el user2"}'
+```
+
+### 3. Seguir a un Usuario
+
+```bash
+curl --location --request POST 'https://uala-tweet-2.onrender.com/follow?followID=user3' \
+--header 'User-ID: user1'
+```
 
 ## Contribución
 
