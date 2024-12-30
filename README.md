@@ -15,6 +15,10 @@ Uala-Tweet es una plataforma de microblogging similar a Twitter, construida con 
 - [Contribución](#contribución)
 - [Licencia](#licencia)
 
+## Documentación Adicional
+
+Para obtener información más detallada sobre la arquitectura y el diseño de **Uala-Tweet**, consulta nuestra [Wiki](https://github.com/tu_usuario/uala-tweet/wiki) donde encontrarás documentos sobre la arquitectura, RFCs de cambios, y tipos de datos en los endpoints.
+
 ## Características
 
 - Registro y autenticación de usuarios.
