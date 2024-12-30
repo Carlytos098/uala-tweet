@@ -4,6 +4,8 @@ Uala-Tweet es una plataforma de microblogging similar a Twitter, construida con 
 
 ## Tabla de Contenidos
 
+- [Asumptions](#assumptions)
+- [Documentación Adicional](#documentación-adicional)
 - [Características](#características)
 - [Tecnologías Usadas](#tecnologías-usadas)
 - [Requisitos Previos](#requisitos-previos)
@@ -15,6 +17,10 @@ Uala-Tweet es una plataforma de microblogging similar a Twitter, construida con 
 - [API Desplegada en Render](#api-desplegada-en-render)
 - [Contribución](#contribución)
 - [Licencia](#licencia)
+
+## Asumptions
+
+Para comprender mejor las decisiones de diseño y las limitaciones de la aplicación, consulta el archivo [ASSUMPTIONS.txt](ASSUMPTIONS.txt). Este documento describe las suposiciones que se hicieron durante el desarrollo y los aspectos pendientes a mejorar.
 
 ## Documentación Adicional
 
