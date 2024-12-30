@@ -1,0 +1,39 @@
+Este documento presenta las suposiciones y limitaciones de la implementación de Uala-Tweet, un sistema de microblogging.
+
+## 1. Limitaciones por Tiempo
+- **Descripción**: La implementación de la aplicación se llevó a cabo en un periodo limitado debido a las festividades de Navidad y Año Nuevo, así como a las obligaciones laborales y guardias que asumo en mi empleo actual.
+- **Implicaciones**:
+  - Esta restricción de tiempo ha llevado a una simplificación en ciertas áreas, como algunos endpoints, la gestión de errores y la seguridad, entre otros.
+
+## 2. Uso de Repositorio en Memoria
+- **Descripción**: La aplicación utiliza un repositorio en memoria (Memory Repository) para almacenar los datos de usuarios y tweets. 
+- **Implicaciones**: 
+  - Esta implementación es adecuada para pruebas y desarrollo rápido, pero no es persistente; todos los datos se pierden al reiniciar la aplicación. Para un entorno en producción, se recomendaría integrar una base de datos persistente (por ejemplo, MongoDB) que permita la retención y recuperación de datos.
+
+## 3. Seguridad y Autenticación
+- **Descripción**: La implementación actual no incorpora un sistema robusto de autenticación y autorización, ya que se trata de una evaluación inicial.
+- **Implicaciones**:
+  - Un sistema de autenticación basado en tokens JWT sería esencial para proteger las rutas de la API y asegurar la identidad del usuario. Esto es crucial para cualquier aplicación que maneje información sensible o cuente con interacciones sociales.
+
+## 4. Manejo de Errores
+- **Descripción**: La gestión de errores en la API es mínima en esta fase. 
+- **Implicaciones**:
+  - La falta de un manejo exhaustivo de errores podría conducir a respuestas no informativas para los clientes y dificultades en la depuración. Un diseño más robusto incluiría un tratamiento de errores adecuado, proporcionando respuestas claras y detalladas ante fallos.
+
+## 5. Escalabilidad
+- **Descripción**: La aplicación ha sido diseñada inicialmente sin considerar la escalabilidad.
+- **Implicaciones**:
+  - Aunque el uso de un repositorio en memoria permite un desarrollo ágil, no soporta una alta carga de trabajo. Para la producción, se debe considerar la implementación de una arquitectura preparada para escalar horizontalmente y manejar grandes volúmenes de usuarios y tweets.
+
+## 6. Documentación de la API
+- **Descripción**: La documentación sobre los métodos de la API y sus requerimientos actuales es limitada.
+- **Implicaciones**:
+  - Para asegurar que los futuros desarrolladores y usuarios comprendan cómo interactuar con la API, se debe crear una documentación exhaustiva que explique los endpoints, los tipos de datos esperados y los ejemplos de uso.
+
+## 7. Funcionalidades Futuras
+- **Descripción**: Se considera que la aplicación podría expandirse en el futuro para incluir más características.
+- **Implicaciones**:
+  - Funcionalidades tales como el soporte para contenidos multimedia (imágenes y videos) y notificaciones en tiempo real a través de WebSockets serían valiosas para mejorar la experiencia del usuario y hacer que la plataforma sea más competitiva.
+
+## Conclusiones
+Las suposiciones y limitaciones mencionadas son cruciales para tener en cuenta al considerar el siguiente paso en el desarrollo de Uala-Tweet. A medida que se avance hacia un despliegue en producción, se recomienda priorizar la implementación de características de seguridad, gestión de errores y la selección de un sistema de almacenamiento persistente.
